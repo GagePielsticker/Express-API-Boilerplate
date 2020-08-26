@@ -6,12 +6,10 @@ module.exports = client => {
   client.connectDatabase = () => {
     return new Promise(async (resolve, reject) => {
       const { host, port, database, username, password } = client.apiSettings.mongodb
-      await client.mongoose.connect(`mongodb://${username ? `${username}:${password}@` : ''}${host}:${port}/${database}`, {
+      return client.mongoose.connect(`mongodb://${username ? `${username}:${password}@` : ''}${host}:${port}/${database}`, {
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
-        .then(() => resolve())
-        .catch(e => reject(new Error(`Mongoose could not connect to mongodb: ${e}`)))
     })
   }
 }

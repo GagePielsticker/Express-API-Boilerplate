@@ -1,6 +1,6 @@
 # Express Api Boilerplate
 [![Known Vulnerabilities](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/badge.svg)](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/)
-
+![License](https://img.shields.io/badge/license-MIT-green)
 ## Foreword
 
 This is a boilerplate to help quickly throw up semi-secure REST api's. It comes packaged with Mongoose, express, helmet, and a whole host of security features. All of this can be configured in the settings file located in `src/settings/api_settings.json`.

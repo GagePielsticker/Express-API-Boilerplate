@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:12-slim
 
 RUN mkdir -p /usr/src/api
 WORKDIR /usr/src/api

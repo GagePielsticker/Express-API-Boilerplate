@@ -26,7 +26,7 @@ This does not garuntee complete and utter security. This is just a simple boiler
 - - PermittedCrossDomainPolicies
 - - referrerPolic
 - - xssFilter
-- Key authentication if used by private seperate application
+- Key authentication if used by private seperate application (optional)
 - Packaged with an express-validator in the routes to validate params
 - XSS filter middleware to sanitize req.body, req.query, and req.params as well as manual filtration.
 - Time based attack protection on the private key

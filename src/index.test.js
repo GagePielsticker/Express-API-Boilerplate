@@ -45,5 +45,5 @@ https.createServer({
   cert: fs.readFileSync('./src/settings/server.cert', 'utf8')
 }, app)
   .listen(client.apiSettings.api.port, function () {
-    process.exit(1)
+    process.exit(0)
   })

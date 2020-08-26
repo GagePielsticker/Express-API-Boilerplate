@@ -9,7 +9,7 @@
 
   "api" : {
     "port" : 8443,
-    "key" : ""
+    "secretKey" : ""
   },
 
   "rate_limiter" : {

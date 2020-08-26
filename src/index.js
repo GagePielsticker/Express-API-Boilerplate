@@ -14,6 +14,15 @@ app.use(rateLimit(client.apiSettings.rate_limiter)) // appies to all request
 app.use(helmet())
 app.set('trust proxy', 1)
 
+/* Custom middleware to check if a secretKey exist and if so make sure header has it to proceed */
+app.use('/', (req, res, next) => {
+  if (client.apiSettings.api.secretKey !== '' && req.header('secretKey') !== client.apiSettings.api.secretKey) {
+    return res.send('Invalid api authentication key.')
+  } else {
+    next()
+  }
+})
+
 /* Require our engines and pass our client */
 require('./library/database.js')(client)
 require('./library/engine.js')(client)
@@ -22,13 +31,6 @@ require('./library/engine.js')(client)
 require('./models/user.model.js')(client)
 
 /* Routing */
-app.use('/', (req, res, next) => {
-  if (client.apiSettings.api.key !== '' && req.header('key') !== client.apiSettings.api.key) {
-    return res.send('Invalid api authentication key.')
-  } else {
-    next()
-  }
-})
 app.use('/', require('./routes/index.js'))
 
 /* Listen on https only */

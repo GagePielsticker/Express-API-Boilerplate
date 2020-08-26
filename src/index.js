@@ -21,7 +21,7 @@ app.set('trust proxy', 1)
 app.use('/', (req, res, next) => {
   if (client.apiSettings.api.secretKey !== '') {
     if (safeCompare(req.header('secretKey'), client.apiSettings.api.secretKey)) next()
-    else return res.send('You are unable to access this api.')
+    else return res.status(403).send('You are unable to access this api.')
   } else next()
 })
 

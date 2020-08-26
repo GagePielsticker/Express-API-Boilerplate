@@ -29,14 +29,14 @@ sidenote- the engine.js is where the functionality of the api is intended to be 
 To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.
 
 ## Dependencies
-- Express
-- Express-rate-limit
-- https
-- Helmet
-- XSS
-- Express-validator
-- Mongoose
-- safe-compare
+- Express (main framework)
+- Express-rate-limit (application layer brute force protection)
+- https (TLS)
+- Helmet (some header protection/safe defaults)
+- XSS (xss filtration)
+- Express-validator (route data validating)
+- Mongoose (databasing)
+- safe-compare (time based comparison protection)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -23,6 +23,7 @@ sidenote- the engine.js is where the functionality of the api is intended to be 
 - - xssFilter
 - Key authentication if used by private seperate application
 - Packaged with an xss filter and express-validator in the routes to 1. help with xss filtration and 2. validate params
+- Time based attack protection on the private key
 
 ## Running
 To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.

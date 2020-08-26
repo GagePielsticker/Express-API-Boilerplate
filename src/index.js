@@ -23,12 +23,8 @@ app.use('/', (req, res, next) => {
   }
 })
 
-/* Require our engines and pass our client */
-require('./library/database.js')(client)
+/* Require our engines/libs and pass our client */
 require('./library/engine.js')(client)
-
-/* Require our models */
-require('./models/user.model.js')(client)
 
 /* Routing */
 app.use('/', require('./routes/index.js'))

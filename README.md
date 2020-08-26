@@ -28,7 +28,6 @@ sidenote- the engine.js is where the functionality of the api is intended to be 
 To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.
 
 ## Dependencies
-- Mongoose
 - Express
 - Express-rate-limit
 - https

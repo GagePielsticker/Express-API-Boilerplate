@@ -4,6 +4,7 @@ const app = express()
 const fs = require('fs')
 const helmet = require('helmet')
 const rateLimit = require('express-rate-limit')
+const safeCompare = require('safe-compare')
 
 /* Configure our rest client */
 const client = {
@@ -16,11 +17,10 @@ app.set('trust proxy', 1)
 
 /* Custom middleware to check if a secretKey exist and if so make sure header has it to proceed */
 app.use('/', (req, res, next) => {
-  if (client.apiSettings.api.secretKey !== '' && req.header('secretKey') !== client.apiSettings.api.secretKey) {
-    return res.send('Invalid api authentication key.')
-  } else {
-    next()
-  }
+  if (client.apiSettings.api.secretKey !== '') {
+    if (safeCompare(req.header('secretKey'), client.apiSettings.api.secretKey)) next()
+    else return res.send('You are unable to access this api.')
+  } else next()
 })
 
 /* Require our engines/libs and pass our client */

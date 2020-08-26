@@ -3,8 +3,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/GagePielsticker/Express-API-Boilerplate/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate.svg?branch=master)](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate)
 ![GitHub last commit](https://img.shields.io/github/last-commit/gagepielsticker/Express-API-Boilerplate)
-![GitHub stars](https://img.shields.io/github/stars/gagepielsticker/Express-API-Boilerplate?style=social)
-![GitHub followers](https://img.shields.io/github/followers/gagepielsticker?style=social)
 
 ## Foreword
 
@@ -49,3 +47,7 @@ To use this download and extract files as normal and navigate to the root folder
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 All code must follow standardjs principles. Keep documentation thorough as well.
+
+![GitHub stars](https://img.shields.io/github/stars/gagepielsticker/Express-API-Boilerplate?style=social)
+![GitHub followers](https://img.shields.io/github/followers/gagepielsticker?style=social)
+

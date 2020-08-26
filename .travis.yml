@@ -8,4 +8,4 @@ before_install:
 script:
   - npm run buildTest
 
-# This is mainly to test if the code will run without error/build, not necessarily to test
+# This is mainly to test if the code will run without error/build, not necessarily to test 

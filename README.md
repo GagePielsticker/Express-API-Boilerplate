@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/GagePielsticker/Express-API-Boilerplate/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate.svg?branch=master)](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate)
 ![GitHub last commit](https://img.shields.io/github/last-commit/gagepielsticker/Express-API-Boilerplate)
+[![HitCount](http://hits.dwyl.com/gagepielsticker/express-api-boilerplate.svg)](http://hits.dwyl.com/gagepielsticker/express-api-boilerplate)
 
 ## Foreword
 

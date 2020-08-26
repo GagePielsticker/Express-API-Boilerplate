@@ -4,6 +4,8 @@
 
 This is a boilerplate to help quickly throw up secure REST api's. It comes packaged with Mongoose, express, helmet. API will only except request over https and all requesters are ratelimited. All of this can be configured in the settings file located in `src/settings/api_settings.json`.
 
+sidenote- the engine.js is where the functionality of the api is intended to be stored, and because its on the client we simply pass the client to our routes etc.
+
 ## Security offered
 - Ratelimiting to prevent brute force style attacks and keep load down
 - HTTPS Transport layer only to enforce secure communications

@@ -7,7 +7,7 @@ This is a boilerplate to help quickly throw up semi-secure REST api's. It comes 
 sidenote- the engine.js is where the functionality of the api is intended to be stored, and because its on the client we simply pass the client to our routes etc.
 
 ## Security offered
-- Ratelimiting to prevent brute force style attacks and keep load down. This is simply an application level ratelimit to prevent bruteforce. A better implimentation would be on the reverse proxy level, however i packaged it incase that option isnt available/unknown.
+- Ratelimiting to prevent brute force style attacks and keep load down. This is simply an application level ratelimit to prevent bruteforce. A better implementation would be on the reverse proxy level, however i packaged it incase that option isnt available/unknown.
 - HTTPS Transport layer only to enforce secure communications
 - HelmetJS middleware security for headers which includes these enabled defaultly
 - - ContentSecurityPolicy

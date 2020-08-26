@@ -1,4 +1,4 @@
-# Secure express Api Boilerplate
+# Express Api Boilerplate
 
 ## Introduction
 
@@ -22,6 +22,7 @@ sidenote- the engine.js is where the functionality of the api is intended to be 
 - - referrerPolic
 - - xssFilter
 - Key authentication if used by private seperate application
+- Packaged with an xss filter and express-validator in the routes to 1. help with xss filtration and 2. validate params
 
 ## Running
 To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.
@@ -32,6 +33,8 @@ To use this download and extract files as normal and navigate to the root folder
 - Express-rate-limit
 - https
 - Helmet
+- XSS
+- Express-validator
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -36,6 +36,7 @@ To use this download and extract files as normal and navigate to the root folder
 - XSS
 - Express-validator
 - Mongoose
+- safe-compare
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

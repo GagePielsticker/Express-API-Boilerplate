@@ -1,3 +1,4 @@
+'use strict'
 module.exports = client => {
   const Schema = client.mongoose.Schema
 

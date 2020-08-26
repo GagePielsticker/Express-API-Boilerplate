@@ -1,3 +1,4 @@
+'use strict'
 module.exports = client => {
   /**
    * Connects mongoose to our mongodb database defined in the api settings

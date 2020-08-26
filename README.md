@@ -22,7 +22,8 @@ sidenote- the engine.js is where the functionality of the api is intended to be 
 - - referrerPolic
 - - xssFilter
 - Key authentication if used by private seperate application
-- Packaged with an xss filter and express-validator in the routes to 1. help with xss filtration and 2. validate params
+- Packaged with an express-validator in the routes to validate params
+- XSS filter middleware to sanitize req.body, req.query, and req.params as well as manual filtration.
 - Time based attack protection on the private key
 
 ## Running

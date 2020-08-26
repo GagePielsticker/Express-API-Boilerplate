@@ -5,6 +5,7 @@ const fs = require('fs')
 const helmet = require('helmet')
 const rateLimit = require('express-rate-limit')
 const safeCompare = require('safe-compare')
+const xss = require('xss-clean')
 
 /* Configure our rest client */
 const client = {
@@ -13,6 +14,7 @@ const client = {
 }
 app.use(rateLimit(client.apiSettings.rate_limiter)) // appies to all request
 app.use(helmet())
+app.use(xss())
 app.set('trust proxy', 1)
 
 /* Custom middleware to check if a secretKey exist and if so make sure header has it to proceed */

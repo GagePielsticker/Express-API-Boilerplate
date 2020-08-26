@@ -1,14 +1,14 @@
 {
   "name": "secure-express-api",
   "version": "1.0.0",
-  "description": "A secure REST API boilerplate over https using mongoose and express with a host of security features.",
+  "description": "A semi-secure REST API boilerplate over https using mongoose and express with a host of security features.",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GagePielsticker/Secure-Express-API"
+    "url": "https://github.com/GagePielsticker/Express-API-Boilerplate/"
   },
   "author": "Gage Pielsticker",
   "license": "MIT",
@@ -20,6 +20,6 @@
     "https": "^1.0.0",
     "mongoose": "^5.10.0",
     "safe-compare": "^1.1.4",
-    "xss": "^1.0.8"
+    "xss-clean": "^0.1.1"
   }
 }

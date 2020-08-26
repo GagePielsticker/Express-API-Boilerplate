@@ -22,6 +22,13 @@ require('./library/engine.js')(client)
 require('./models/user.model.js')(client)
 
 /* Routing */
+app.use('/', (req, res, next) => {
+  if (client.apiSettings.api.key !== '' && req.header('key') !== client.apiSettings.api.key) {
+    return res.send('Invalid api authentication key.')
+  } else {
+    next()
+  }
+})
 app.use('/', require('./routes/index.js'))
 
 /* Listen on https only */

@@ -7,7 +7,7 @@ This is a boilerplate to help quickly throw up semi-secure REST api's. It comes 
 This does not garuntee complete and utter security. This is just a simple boilerplate to throw up a **semi-secure** api. To achieve absolute security you must take several steps outside of this code such as server hardening, reverse proxies, firewall rules, and many other things. This is strictly a boilerplate if you want to quickly throw up api's without necessarily having to worry about immediate security vulnerabilities presented in express apps.
 
 ## Security offered
-- Ratelimiting to prevent brute force style attacks and keep load down. This is simply an application level ratelimit to prevent bruteforce. A better implementation would be on the reverse proxy level, however i packaged it incase that option isnt available/unknown.
+- Ratelimiting to prevent brute force style attacks and keep load down. This is simply an application level ratelimit to prevent bruteforce.
 - HTTPS Transport layer only to enforce secure communications
 - HelmetJS middleware security for headers which includes these enabled defaultly
 - - ContentSecurityPolicy

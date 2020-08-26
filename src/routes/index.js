@@ -13,7 +13,7 @@ module.exports = client => { // The reason we pass client is to access engine fu
     // body('username').isEmail(), example payload validation
     // body('password').isLength({ min: 5 })
 
-  ], async (req, res) => {
+  ], (req, res) => {
     // xss(req.param) example xss filter
 
     /*

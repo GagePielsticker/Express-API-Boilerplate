@@ -37,8 +37,8 @@ app.use('/', require('./routes/index.js'))
 
 /* Listen on https only */
 https.createServer({
-  key: fs.readFileSync('./settings/server.key', 'utf8'),
-  cert: fs.readFileSync('./settings/server.cert', 'utf8')
+  key: fs.readFileSync('./src/settings/server.key', 'utf8'),
+  cert: fs.readFileSync('./src/settings/server.cert', 'utf8')
 }, app)
   .listen(client.apiSettings.api.port, function () {
     console.log(`API listening on port ${client.apiSettings.api.port}!`)

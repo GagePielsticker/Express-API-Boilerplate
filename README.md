@@ -2,6 +2,9 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/badge.svg)](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/GagePielsticker/Express-API-Boilerplate/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate.svg?branch=master)](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate)
+![GitHub last commit](https://img.shields.io/github/last-commit/gagepielsticker/Express-API-Boilerplate)
+![GitHub stars](https://img.shields.io/github/stars/gagepielsticker/Express-API-Boilerplate?style=social)
+![GitHub followers](https://img.shields.io/github/followers/gagepielsticker?style=social)
 
 ## Foreword
 

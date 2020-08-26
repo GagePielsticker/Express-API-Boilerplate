@@ -4,7 +4,8 @@
   "description": "A semi-secure REST API boilerplate over https using mongoose and express with a host of security features.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "buildTest": "node src/index.test.js"
   },
   "repository": {
     "type": "git",

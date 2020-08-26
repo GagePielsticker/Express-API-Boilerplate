@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> This is a boilerplate to help quickly throw up secure REST api's. It comes packaged with Mongoose, express, helmet. API will only except request over https and all requesters are ratelimited. All of this can be configured in the settings file located in `src/settings/api_settings.json`.
+This is a boilerplate to help quickly throw up secure REST api's. It comes packaged with Mongoose, express, helmet. API will only except request over https and all requesters are ratelimited. All of this can be configured in the settings file located in `src/settings/api_settings.json`.
 
 ## Security offered
 - Ratelimiting to prevent brute force style attacks and keep load down
@@ -20,6 +20,9 @@
 - - referrerPolic
 - - xssFilter
 - Key authentication if used by private seperate application
+
+## Running
+To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.
 
 ## Dependencies
 - Mongoose

@@ -18,6 +18,7 @@
     "express-validator": "^6.6.1",
     "helmet": "^4.1.0",
     "https": "^1.0.0",
+    "mongoose": "^5.10.0",
     "xss": "^1.0.8"
   }
 }

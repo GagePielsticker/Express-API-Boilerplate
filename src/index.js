@@ -24,7 +24,11 @@ app.use('/', (req, res, next) => {
 })
 
 /* Require our engines/libs and pass our client */
+require('./library/database.js')(client)
 require('./library/engine.js')(client)
+
+/* Require our models */
+require('./models/user.model.js')(client)
 
 /* Routing */
 app.use('/', require('./routes/index.js'))
@@ -36,4 +40,7 @@ https.createServer({
 }, app)
   .listen(client.apiSettings.api.port, function () {
     console.log(`Converse API listening on port ${client.apiSettings.api.port}!`)
+    client.connectDatabase()
+      .then(() => console.log('Connected database.'))
+      .catch(e => console.log(`Could not connect database: ${e}`))
   })

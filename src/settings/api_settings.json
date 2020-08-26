@@ -4,6 +4,14 @@
     "secretKey" : ""
   },
 
+  "mongodb" : {
+    "host" : "localhost",
+    "port" : "27015",
+    "username" : "",
+    "password" : "",
+    "database" : ""
+  },
+
   "rate_limiter" : {
     "windowMs": 900000,
     "max": 2000

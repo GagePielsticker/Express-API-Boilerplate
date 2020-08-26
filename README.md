@@ -12,6 +12,7 @@ This does not garuntee complete and utter security. This is just a simple boiler
 
 ## Security offered
 - Ratelimiting to prevent brute force style attacks and keep load down. This is simply an application level ratelimit to prevent bruteforce.
+- 'use strict' enforced to prevent bad practice/coding errors
 - HTTPS Transport layer only to enforce secure communications
 - HelmetJS middleware security for headers which includes these enabled defaultly
 - - ContentSecurityPolicy

@@ -1,4 +1,4 @@
-# Secure REST Api Boilerplate
+# Secure express Api Boilerplate
 
 ## Introduction
 

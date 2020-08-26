@@ -28,9 +28,5 @@ module.exports = client => { // The reason we pass client is to access engine fu
     res.send('Welcome to the api.')
   })
 
-  router.get('*', (req, res) => {
-    res.status(404).send('404 Route not found.')
-  })
-
   return router
 }

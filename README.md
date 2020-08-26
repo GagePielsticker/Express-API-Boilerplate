@@ -1,4 +1,4 @@
-# Secure express Api Boilerplate
+# Express Api Boilerplate
 
 ## Introduction
 

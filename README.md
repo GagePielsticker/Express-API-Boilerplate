@@ -34,7 +34,7 @@ To use this download and extract files as normal and navigate to the root folder
 - Express-rate-limit (application layer brute force protection)
 - https (TLS)
 - Helmet (some header protection/safe defaults)
-- XSS (xss filtration)
+- xss-clean (xss filtration)
 - Express-validator (route data validating)
 - Mongoose (databasing)
 - safe-compare (time based comparison protection)

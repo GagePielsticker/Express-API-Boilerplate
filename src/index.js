@@ -35,7 +35,7 @@ require('./library/engine.js')(client)
 require('./models/user.model.js')(client)
 
 /* Routing */
-app.use('/', require('./routes/index.js'))
+app.use('/', require('./routes/index.js')(client))
 
 /* Listen on https only */
 https.createServer({

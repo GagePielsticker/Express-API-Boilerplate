@@ -41,7 +41,7 @@ https.createServer({
   cert: fs.readFileSync('./settings/server.cert', 'utf8')
 }, app)
   .listen(client.apiSettings.api.port, function () {
-    console.log(`Converse API listening on port ${client.apiSettings.api.port}!`)
+    console.log(`API listening on port ${client.apiSettings.api.port}!`)
     client.connectDatabase()
       .then(() => console.log('Connected database.'))
       .catch(e => console.log(`Could not connect database: ${e}`))

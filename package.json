@@ -1,0 +1,22 @@
+{
+  "name": "secure-rest-api",
+  "version": "1.0.0",
+  "description": "A secure REST api boilerplate including express and mongoose.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GagePielsticker/Secure-Rest-API"
+  },
+  "author": "Gage Pielsticker",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^4.1.0",
+    "https": "^1.0.0",
+    "mongoose": "^5.10.0"
+  }
+}

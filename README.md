@@ -1,4 +1,5 @@
 # Express Api Boilerplate
+[![Known Vulnerabilities](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/badge.svg)](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/)
 
 ## Foreword
 

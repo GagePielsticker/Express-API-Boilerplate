@@ -34,6 +34,7 @@ To use this download and extract files as normal and navigate to the root folder
 - Helmet
 - XSS
 - Express-validator
+- Mongoose
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -1,12 +1,4 @@
 {
-  "mongodb" : {
-    "host" : "localhost",
-    "port" : "27015",
-    "username" : "",
-    "password" : "",
-    "database" : ""
-  },
-
   "api" : {
     "port" : 8443,
     "secretKey" : ""

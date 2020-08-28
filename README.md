@@ -1,4 +1,5 @@
-# Express Api Boilerplate
+![Express API Boilerplate](https://i.imgur.com/P0ug3Qc.png)
+# 
 [![Known Vulnerabilities](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/badge.svg)](https://snyk.io/test/github/gagepielsticker/Express-API-Boilerplate/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/GagePielsticker/Express-API-Boilerplate/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate.svg?branch=master)](https://travis-ci.org/GagePielsticker/Express-API-Boilerplate)

@@ -42,6 +42,7 @@ To use this download and extract files as normal and navigate to the root folder
 - Express-validator (route data validating)
 - Mongoose (databasing)
 - safe-compare (time based comparison protection)
+- Jest (unit testing framework)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -5,12 +5,13 @@ module.exports = client => {
    * @returns {Promise}
    */
   client.connectDatabase = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       const { host, port, database, username, password } = client.apiSettings.mongodb
-      return client.mongoose.connect(`mongodb://${username ? `${username}:${password}@` : ''}${host}:${port}/${database}`, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+      await client.mongoose.connect(`mongodb://${username ? `${username}:${password}@` : ''}${host}:${port}/${database}`, {
+        useNewUrlParser: true
       })
+        .then(resolve)
+        .catch(reject)
     })
   }
 }

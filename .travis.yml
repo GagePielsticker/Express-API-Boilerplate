@@ -6,6 +6,6 @@ before_install:
   - npm i
   
 script:
-  - npm run buildTest
+  - npm test
 
 # This is mainly to test if the code will run without error/build, not necessarily to test 

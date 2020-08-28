@@ -6,10 +6,10 @@
 
   "mongodb" : {
     "host" : "localhost",
-    "port" : "27015",
+    "port" : "27017",
     "username" : "",
     "password" : "",
-    "database" : ""
+    "database" : "mycooldatabase"
   },
 
   "rate_limiter" : {

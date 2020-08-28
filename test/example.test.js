@@ -12,6 +12,9 @@ beforeAll(async () => {
   /* Connect our database */
   require('../src/library/database')(client)
 
+  /* Import our models */
+  require('../src/models/user.model.js')(client)
+
   /* Connect database */
   await client.connectDatabase()
     .then(() => console.log('Database connected.'))

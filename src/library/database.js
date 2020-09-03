@@ -8,7 +8,9 @@ module.exports = client => {
     return new Promise(async (resolve, reject) => {
       const { host, port, database, username, password } = client.apiSettings.mongodb
       await client.mongoose.connect(`mongodb://${username ? `${username}:${password}@` : ''}${host}:${port}/${database}`, {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        reconnectTries: 10,
+        reconnectInterval: 1000
       })
         .then(resolve)
         .catch(reject)

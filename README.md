@@ -12,8 +12,6 @@ This is a boilerplate to help quickly throw up semi-secure REST api's. It comes 
 This does not garuntee complete and utter security. This is just a simple boilerplate to throw up a **semi-secure** api. To achieve absolute security you must take several steps outside of this code such as server hardening, reverse proxies, firewall rules, and many other things. This is strictly a boilerplate if you want to quickly throw up api's without necessarily having to worry about immediate security vulnerabilities presented in express apps.
 
 ## Security offered
-- Application level ratelimiting to prevent brute force style attacks and keep load down.
-- HTTPS Transport layer only to enforce secure communications
 - HelmetJS middleware security for headers which includes these enabled defaultly
 - - ContentSecurityPolicy
 - - dnsPrefetchControl
@@ -30,13 +28,15 @@ This does not garuntee complete and utter security. This is just a simple boiler
 - Packaged with an express-validator in the routes to validate params
 - XSS filter middleware to sanitize req.body, req.query, and req.params as well as manual filtration.
 - Time based attack protection on the private key
+- HaProxy loadbalancing if utilizing docker
 
 ## Running
 To use this download and extract files as normal and navigate to the root folder (not src). Then type `npm i` in console to install the dependencies. Once they are installed you will want to run the app through the `npm start` script.
 
+Alternatively you can run the `docker-compose up` script to utilize haproxy loadbalancing & containers.
+
 ## Dependencies
 - Express (main framework)
-- Express-rate-limit (application layer brute force protection)
 - Helmet (some header protection/safe defaults)
 - xss-clean (xss filtration)
 - Express-validator (route data validating)

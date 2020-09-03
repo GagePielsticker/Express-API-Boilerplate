@@ -1,17 +1,13 @@
 FROM node:12-slim
 
-USER node
-
 RUN mkdir -p /usr/src/api
 WORKDIR /usr/src/api
 
-COPY package.json .
+COPY ./package.json .
 RUN npm install --only=prod
 COPY . .
 
 HEALTHCHECK --interval=1m --timeout=3s --start-period=15s \
   CMD curl -fs https://localhost:8443/healthcheck || exit 1
-
-EXPOSE 8443
 
 CMD ["npm","start"]

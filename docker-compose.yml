@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  # Our loadbalancer, hit http://load-balancer:3000 for incoming internal request
+  load-balancer:
+    restart: unless-stopped
+    image: haproxy
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+
+  
+  # Database
+  mongodb:
+    restart: unless-stopped
+    image: mongo
+    expose: 
+      - 27017
+    volumes:
+      - /data/db:/data/db
+      
+  # Our api cluster
+  api_cluster1:
+    restart: unless-stopped
+    build: .
+    environment: 
+      - APPID=3001
+
+  api_cluster2:
+    restart: unless-stopped
+    build: .
+    environment: 
+      - APPID=3002

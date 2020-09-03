@@ -1,19 +1,14 @@
 {
   "api" : {
-    "port" : 8443,
+    "port" : 3000,
     "secretKey" : ""
   },
 
   "mongodb" : {
-    "host" : "localhost",
+    "host" : "mongodb",
     "port" : "27017",
     "username" : "",
     "password" : "",
     "database" : "mycooldatabase"
-  },
-
-  "rate_limiter" : {
-    "windowMs": 900000,
-    "max": 2000
   }
 }

@@ -1,21 +1,21 @@
 'use strict'
 
 const express = require('express')
-const https = require('https')
 const app = express()
-const fs = require('fs')
 const helmet = require('helmet')
-const rateLimit = require('express-rate-limit')
 const safeCompare = require('safe-compare')
 const xss = require('xss-clean')
+const morgan = require('morgan')
 
 /* Configure our rest client */
 const client = {
   mongoose: require('mongoose'),
-  apiSettings: require('./settings/api_settings.json')
+  apiSettings: require('./settings/api_settings.json'),
+  appid: process.env.APPID
 }
-app.use(rateLimit(client.apiSettings.rate_limiter)) // appies to all request
+
 app.use(helmet())
+app.use(morgan('common'))
 app.use(xss())
 app.set('trust proxy', 1)
 
@@ -37,14 +37,10 @@ require('./models/user.model.js')(client)
 /* Routing */
 app.use('/', require('./routes/index.js')(client))
 
-/* Listen on https only */
-https.createServer({
-  key: fs.readFileSync('./src/settings/server.key', 'utf8'),
-  cert: fs.readFileSync('./src/settings/server.cert', 'utf8')
-}, app)
-  .listen(client.apiSettings.api.port, function () {
-    console.log(`API listening on port ${client.apiSettings.api.port}!`)
-    client.connectDatabase()
-      .then(() => console.log('Connected database.'))
-      .catch(e => console.log(`Could not connect database: ${e}`))
-  })
+/* Listen on http */
+app.listen(client.appid || client.apiSettings.api.port, () => {
+  console.log(`API ${client.appid} listening on port ${client.appid || client.apiSettings.api.port}!`)
+  client.connectDatabase()
+    .then(() => console.log('Connected database.'))
+    .catch(e => console.log(`Could not connect database: ${e}`))
+})

@@ -6,6 +6,7 @@ const helmet = require('helmet')
 const safeCompare = require('safe-compare')
 const xss = require('xss-clean')
 const morgan = require('morgan')
+const bodyParser = require('body-parser')
 
 /* Configure our rest client */
 const client = {
@@ -16,6 +17,7 @@ const client = {
 
 app.use(helmet())
 app.use(morgan('common'))
+app.use(bodyParser.json())
 app.use(xss())
 app.set('trust proxy', 1)
 

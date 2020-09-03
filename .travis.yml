@@ -2,12 +2,21 @@ language: node_js
 node_js:
   - 12
 
-services: mongodb
+services: 
+  - mongodb
+#  - docker
 
 before_install:
   - npm i
   
 script:
   - npm test
+
+# Auto deploy to docker on successfull build
+#after_success:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+#    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+#    docker push yourhubusername/projectname;
+#    fi
 
 # This is mainly to test if the code will run without error/build, not necessarily to test 

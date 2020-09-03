@@ -10,6 +10,7 @@ const { body, validationResult } = require('express-validator')
 var filterXSS = require('xss-clean/lib/xss').clean
 
 module.exports = client => { // The reason we pass client is to access engine functionality and methods
+  /* Our main index endpoiny */
   router.get('/', [
 
     // body('username').isEmail(), example payload validation
@@ -28,6 +29,11 @@ module.exports = client => { // The reason we pass client is to access engine fu
     */
 
     res.send('Welcome to the api.')
+  })
+
+  /* Our healthcheck endpoint */
+  router.get('/healthcheck', (req, res) => {
+    res.json({ status: 'UP' })
   })
 
   return router

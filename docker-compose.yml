@@ -26,10 +26,10 @@ services:
     restart: unless-stopped
     build: .
     environment: 
-      - APPID=3001
+      - APPID=1
 
   api_cluster2:
     restart: unless-stopped
     build: .
     environment: 
-      - APPID=3002
+      - APPID=2

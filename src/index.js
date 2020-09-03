@@ -38,8 +38,8 @@ require('./models/user.model.js')(client)
 app.use('/', require('./routes/index.js')(client))
 
 /* Listen on http */
-app.listen(client.appid || client.apiSettings.api.port, () => {
-  console.log(`API ${client.appid} listening on port ${client.appid || client.apiSettings.api.port}!`)
+app.listen(client.apiSettings.api.port, () => {
+  console.log(`API ${client.appid} listening on port ${client.apiSettings.api.port}!`)
   client.connectDatabase()
     .then(() => console.log('Connected database.'))
     .catch(e => console.log(`Could not connect database: ${e}`))
